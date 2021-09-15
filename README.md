@@ -8,15 +8,15 @@ This is a submission to the Helsinki Deblur Challenge 2021 ([link](http://fips.f
 
 The key to improving results for large blur categories was to create a large set of simulated training images using the provided images for other blur levels. So for each blur category, we first trained a multi-scale set of five networks to simulate the blurring by using as input thresholded CAM01 images, and as target the CAM02 images for that blur level. The trained networks were then applied to the 3800 thresholded CAM01 images of all other blur levels, to produce 'virtual CAM02' images. A new multi-scale set of five networks was then trained using the virtual CAM02 images as input, and the thresholded CAM01 images as target, to produce a deconvolving method. The provided CAM02 images were used as a validation set to monitor network performance during training. As described above, this same procedure was used for all blur caterogies (although for smaller blur categories it is possible to train with only the provided CAM02 images).
 
-For the provided CAM02 images, we obtain the following Levenshtein distances using the trained networks:
+For the provided CAM02 images of each category, we obtain the following Levenshtein distances using the trained networks:
 
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 96.28 | 96.285 |  |  |  |  |  |  |  |  |
+| 96.28 | 96.285 | 95.845 | 96.35 | 96.21 | 96.25 | 95.455 | 96.34 | 95.795 | 95.68 |
 
 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  | |  |  |  |  |
+| 94.785 | 95.65 | 94.825 | 95.215 | 95.02 | 92.2 | 91.515 | 85.82 | 80.95 | 73.47 |
 
 
 # Installation instructions
