@@ -62,3 +62,28 @@ python main.py step19/Times/CAM02/ results/step19/ 19
 ```
 
 Note that, when the Zenodo zip files are used, the example will also output PNGs for the LSF and PSF images, since they have a `.tif` extension as well.
+
+# Example outputs
+
+| Step | Input | Output |
+| --- | --- | --- |
+| 0 | ![](exampleoutputs/input0.png) | ![](exampleoutputs/output0.png) |
+| 1 | ![](exampleoutputs/input1.png) | ![](exampleoutputs/output1.png) |
+| 2 | ![](exampleoutputs/input2.png) | ![](exampleoutputs/output2.png) |
+| 3 | ![](exampleoutputs/input3.png) | ![](exampleoutputs/output3.png) |
+| 4 | ![](exampleoutputs/input4.png) | ![](exampleoutputs/output4.png) |
+| 5 | ![](exampleoutputs/input5.png) | ![](exampleoutputs/output5.png) |
+| 6 | ![](exampleoutputs/input6.png) | ![](exampleoutputs/output6.png) |
+| 7 | ![](exampleoutputs/input7.png) | ![](exampleoutputs/output7.png) |
+| 8 | ![](exampleoutputs/input8.png) | ![](exampleoutputs/output8.png) |
+| 9 | ![](exampleoutputs/input9.png) | ![](exampleoutputs/output9.png) |
+| 10 | ![](exampleoutputs/input10.png) | ![](exampleoutputs/output10.png) |
+| 11 | ![](exampleoutputs/input11.png) | ![](exampleoutputs/output11.png) |
+| 12 | ![](exampleoutputs/input12.png) | ![](exampleoutputs/output12.png) |
+| 13 | ![](exampleoutputs/input13.png) | ![](exampleoutputs/output13.png) |
+| 14 | ![](exampleoutputs/input14.png) | ![](exampleoutputs/output14.png) |
+| 15 | ![](exampleoutputs/input15.png) | ![](exampleoutputs/output15.png) |
+| 16 | ![](exampleoutputs/input16.png) | ![](exampleoutputs/output16.png) |
+| 17 | ![](exampleoutputs/input17.png) | ![](exampleoutputs/output17.png) |
+| 18 | ![](exampleoutputs/input18.png) | ![](exampleoutputs/output18.png) |
+| 19 | ![](exampleoutputs/input19.png) | ![](exampleoutputs/output19.png) |
