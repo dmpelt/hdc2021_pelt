@@ -18,7 +18,13 @@ For the provided CAM02 images of each category, we obtain the following Levensht
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 94.785 | 95.65 | 94.825 | 95.215 | 95.02 | 92.2 | 92.19 | 87.66 | 82.735 | 77.295 |
 
-[1] Pelt, D. M., & Sethian, J. A. (2018). A mixed-scale dense convolutional neural network for image analysis. *Proceedings of the National Academy of Sciences, 115*(2), 254-259.
+## References
+
+<table>
+  <tr>
+    <td style='vertical-align: top;'>[1]</td><td  style='vertical-align: top;'>Pelt, D. M., & Sethian, J. A. (2018). A mixed-scale dense convolutional neural network for image analysis. *Proceedings of the National Academy of Sciences, 115*(2), 254-259.</td>
+  </tr>
+</table>
 
 # Installation instructions
 
