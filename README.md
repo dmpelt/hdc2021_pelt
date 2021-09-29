@@ -4,7 +4,7 @@ Daniël M. Pelt, LIACS, Leiden University, Leiden, The Netherlands
 
 # Brief description
 
-This is a submission to the Helsinki Deblur Challenge 2021 ([link](http://fips.fi/HDC2021.php)). The approach uses Mixed-Scale Dense CNNs ([link](https://www.pnas.org/content/115/2/254.short)) to deconvolve images of text. A seperate set of networks is trained for each blur category, but for all categories the used networks and training approaches are identical. A multi-scale approach is used, in which five networks are trained for each blur category: first, a network is trained at 20x downscaled images, then, a network is trained at 10x downscaled images, and at 4x, 2x, and no downscaling afterwards. At each scale, an upscaled version of the network output of the previous scale is used as additional input. 
+This is a submission to the Helsinki Deblur Challenge 2021 ([link](http://fips.fi/HDC2021.php)). The approach uses Mixed-Scale Dense CNNs [1] ([link](https://www.pnas.org/content/115/2/254.short)) to deconvolve images of text. A seperate set of networks is trained for each blur category, but for all categories the used networks and training approaches are identical. A multi-scale approach is used, in which five networks are trained for each blur category: first, a network is trained at 20x downscaled images, then, a network is trained at 10x downscaled images, and at 4x, 2x, and no downscaling afterwards. At each scale, an upscaled version of the network output of the previous scale is used as additional input. 
 
 The key to improving results for large blur categories was to create a large set of simulated training images using the provided images for other blur levels. So for each blur category, we first trained a multi-scale set of five networks to simulate the blurring by using as input thresholded CAM01 images, and as target the CAM02 images for that blur level. The trained networks were then applied to the 3800 thresholded CAM01 images of all other blur levels, to produce 'virtual CAM02' images. A new multi-scale set of five networks was then trained using the virtual CAM02 images as input, and the thresholded CAM01 images as target, to produce a deconvolving method. The provided CAM02 images were used as a validation set to monitor network performance during training. As described above, this same procedure was used for all blur categories (although for smaller blur categories it is possible to train with only the provided CAM02 images). All deconvolving networks were trained until no significant improvements were observed in the error on the validation set. For categories 0 to 15, this resulted in a training time of around 48 hours, while the training time for more difficult categories (16 to 19) was around 7 days.
 
@@ -18,6 +18,7 @@ For the provided CAM02 images of each category, we obtain the following Levensht
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 94.785 | 95.65 | 94.825 | 95.215 | 95.02 | 92.2 | 92.19 | 87.66 | 82.735 | 77.295 |
 
+[1] Pelt, D. M., & Sethian, J. A. (2018). A mixed-scale dense convolutional neural network for image analysis. *Proceedings of the National Academy of Sciences, 115*(2), 254-259.
 
 # Installation instructions
 
